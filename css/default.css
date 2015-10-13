@@ -1,0 +1,99 @@
+.jumbotron-home {
+    /* add bootstrap jumbotron background image */
+    background: url("../img/wodbucket.jpg") no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: auto 100%;
+    color: #ffffff;
+    text-align: center;
+    height: 600px;
+}
+
+.jumbotron-search {
+    /* add bootstrap jumbotron background image */
+    background-color: #337ab7;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: auto 100%;
+    color: #ffffff;
+    text-align: center;
+    height: 220px;
+}
+
+.jumbotron-admin {
+    /* add bootstrap jumbotron background image */
+    background-color: #337ab7;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: auto 100%;
+    color: #ffffff;
+    text-align: center;
+    height: 220px;
+}
+
+.jumbotron-about {
+    /* add bootstrap jumbotron background image */
+    background-color: #337ab7;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: auto 100%;
+    color: #ffffff;
+    text-align: center;
+    height: 220px;
+}
+
+.form-control {
+  height: 50px;
+}
+
+.input-group-addon {
+  background-color: #337ab7;
+  color: #ffffff;
+}
+
+.search-result {
+  background-color: #eeeeee;
+  color: #000000;
+}
+
+.admin-menu {
+  color: #ffffff;
+}
+
+.admin-menu a {
+  color: #ffffff;
+}
+
+.admin-page {
+  color: #000000;
+}
+
+.typeahead-demo .custom-popup-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    background-color: #f9f9f9;
+  }
+
+  .typeahead-demo .custom-popup-wrapper > .message {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    color: #868686;
+  }
+
+  .typeahead-demo .custom-popup-wrapper > .dropdown-menu {
+    position: static;
+    float: none;
+    display: block;
+    min-width: 160px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }

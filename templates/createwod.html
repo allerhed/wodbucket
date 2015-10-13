@@ -1,0 +1,81 @@
+<script type="text/ng-template" id="customTemplate.html">
+  <a>
+      <img ng-src="http://upload.wikimedia.org/wikipedia/commons/thumb/{{match.model.flag}}" width="16">
+      <span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span>
+  </a>
+</script>
+
+<script type="text/ng-template" id="customPopupTemplate.html">
+  <div class="custom-popup-wrapper"
+     ng-style="{top: position().top+'px', left: position().left+'px'}"
+     style="display: block;"
+     ng-show="isOpen() && !moveInProgress"
+     aria-hidden="{{!isOpen()}}">
+    <p class="message">select location from drop down.</p>
+
+    <ul class="dropdown-menu" role="listbox">
+        <li ng-repeat="match in matches track by $index" ng-class="{active: isActive($index) }"
+            ng-mouseenter="selectActive($index)" ng-click="selectMatch($index)" role="option" id="{{::match.id}}">
+            <div uib-typeahead-match index="$index" match="match" query="query" template-url="templateUrl"></div>
+        </li>
+    </ul>
+  </div>
+</script>
+
+<div class="jumbotron jumbotron-admin">
+	<p>Create Wod</p>
+</div>
+<div class='container-fluid typeahead-demo'>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 admin-page">
+      <form>
+        <h3>Creat a new Wod</h3>
+        <div class="form-group">
+          <label for="wodname">Name</label>
+          <input type="text" class="form-control" id="wodname" placeholder="Wod name">
+        </div>
+        <div class="form-group">
+          <label for="woddescription">Description</label>
+          <textarea class="form-control" rows="7" id="woddescription" placeholder="Description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="blocks">Blocks</label>
+          <input type="text" class="form-control" id="blocks" placeholder="1,2,3,4 or A,B,C,D">
+        </div>
+        <div class="form-group">
+          <label for="movements">Movements</label>
+          <input type="text" class="form-control" id="movements" placeholder="Movements">
+          <pre>Model: {{asyncSelected | json}}</pre>
+          <input type="text" ng-model="asyncSelected" placeholder="Locations loaded via $http" uib-typeahead="address for address in getLocation($viewValue)" typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="equipment">Equipment</label>
+          <input type="text" class="form-control" id="equipment" placeholder="Equipment">
+        </div>
+        <div class="form-group">
+          <label for="scoring">Scoring</label>
+          <input type="text" class="form-control" id="scoring" placeholder="Scoring">
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <input type="text" class="form-control" id="category" placeholder="Category">
+        </div>
+        <div class="form-group">
+          <label for="modality">Modality</label>
+          <input type="text" class="form-control" id="modality" placeholder="Modality">
+        </div>
+        <div class="form-group">
+          <label for="lenght">Lenght</label>
+          <input type="text" class="form-control" id="lenght" placeholder="Lenght">
+        </div>
+        <div class="form-group">
+          <label for="youtubelink">Youtubelink</label>
+          <input type="text" class="form-control" id="youtubelink" placeholder="Youtubelink">
+        </div>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+
+    </div>
+  </div>
+</div>
